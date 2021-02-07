@@ -232,7 +232,7 @@ set EFFECTS(blink)           "00"
 set EFFECTS(pulse)           "01"
 set EFFECTS(disco)           "02"
 set EFFECTS(rainbow)         "03"
-set EFFECTS(candle)          "05"
+set EFFECTS(candle)          "04"
 set EFFECTS(pause)           "pause"
 set EFFECTS(halt)            "ff"
 
@@ -1456,7 +1456,7 @@ proc doCommand { cmd } {
     ^candle* {
       checkArgs $c 4 "candle" {^candle [0-9]+ [0-9]+ [0-9]+ [0-9]+$}
       init 0
-      setEffect "candle" [lindex $c 1] [lindex $c 2] [lindex $c 3] [lindex $c 4] 0 1 0
+      setEffect "candle" [lindex $c 1] [lindex $c 2] [lindex $c 3] [lindex $c 4] 0 100 0
     }
     ^disco* {
       checkArgs $c 1 "disco" {^disco [0-9]+$}
